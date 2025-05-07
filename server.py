@@ -20,6 +20,7 @@ def login():
         return jsonify({'error': 'Email and password are required!'}), 400
 
     chrome_options = Options()
+    chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
